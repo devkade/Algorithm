@@ -1,0 +1,2 @@
+C:\Users\mouse\Programming\Algorithm_Practice\Debug\Algorithm_Practice.exe
+C:\Users\mouse\Programming\Algorithm_Practice\Debug\Algorithm_Practice.pdb

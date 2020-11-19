@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="소스 파일">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="헤더 파일">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="소스 파일\초등부">
+      <UniqueIdentifier>{b2908f95-442a-4bd7-9e0a-ab9add600ba0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\BruteForce">
+      <UniqueIdentifier>{9cca04de-c168-45b8-9ad6-b02a86f3c4c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Stack">
+      <UniqueIdentifier>{98801f46-df91-4ed4-9948-0ec8866a343b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\BackTracking">
+      <UniqueIdentifier>{9e0876a7-fe48-4388-8ab9-25e7e78eba05}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Tree">
+      <UniqueIdentifier>{187bd4b3-01fb-4516-a536-8a3871b08ed3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\DaynamicProgramming">
+      <UniqueIdentifier>{e2cd2acb-3c3e-4bc2-832a-1917c25d851d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="1761_Length_Point.cpp">
+      <Filter>소스 파일\Tree</Filter>
+    </ClCompile>
+    <ClCompile Include="17617_robot.cpp">
+      <Filter>소스 파일\초등부</Filter>
+    </ClCompile>
+    <ClCompile Include="17616_findGrade.cpp">
+      <Filter>소스 파일\초등부</Filter>
+    </ClCompile>
+    <ClCompile Include="17615_switchBall.cpp">
+      <Filter>소스 파일\초등부</Filter>
+    </ClCompile>
+    <ClCompile Include="17614_369.cpp">
+      <Filter>소스 파일\초등부</Filter>
+    </ClCompile>
+    <ClCompile Include="7568_bulk.cpp">
+      <Filter>소스 파일\BruteForce</Filter>
+    </ClCompile>
+    <ClCompile Include="10773_Zero.cpp">
+      <Filter>소스 파일\Stack</Filter>
+    </ClCompile>
+    <ClCompile Include="14888_putOperator.cpp">
+      <Filter>소스 파일\BackTracking</Filter>
+    </ClCompile>
+    <ClCompile Include="bfs.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="2156_wine.cpp">
+      <Filter>소스 파일\DaynamicProgramming</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
