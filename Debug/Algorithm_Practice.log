@@ -1,5 +1,2 @@
-﻿  1761_Length_Point.cpp
-C:\Users\mouse\Programming\Algorithm_Practice\1761_Length_Point.cpp(20,9): warning C4101: 'm' :참조되지 않은 지역 변수입니다.
-  2156_wine.cpp
-C:\Users\mouse\Programming\Algorithm_Practice\2156_wine.cpp(54,10): error C3861: 'wine': 식별자를 찾을 수 없습니다.
-  코드를 생성하고 있습니다...
+﻿  2606_virus.cpp
+  Algorithm_Practice.vcxproj -> C:\Users\mouse\Programming\Algorithm_Practice\Debug\Algorithm_Practice.exe

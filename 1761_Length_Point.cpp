@@ -6,7 +6,6 @@ using namespace std;
 
 // 연결 연결 -> 그래프
 // dfs로 쭉 들어가면서 값+
-int number;
 
 void dfs(int x)
 {

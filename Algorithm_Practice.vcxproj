@@ -147,6 +147,8 @@
     <ClCompile Include="17617_robot.cpp" />
     <ClCompile Include="1761_Length_Point.cpp" />
     <ClCompile Include="2156_wine.cpp" />
+    <ClCompile Include="2606_virus.cpp" />
+    <ClCompile Include="2667_putNumberOnApartment.cpp" />
     <ClCompile Include="7568_bulk.cpp" />
     <ClCompile Include="bfs.cpp" />
   </ItemGroup>
