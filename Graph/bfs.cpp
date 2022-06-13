@@ -25,7 +25,7 @@ void BFS(int start) {
 	}
 }
 
-int main_bfs() {
+int main() {
 	// 1과 2를 연결한다.
 	a[1].push_back(2);
 	a[2].push_back(1);

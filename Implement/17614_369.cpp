@@ -5,7 +5,7 @@ using namespace std;
 int num_length(int n);
 int count_369(int n);
 
-int main_17614()
+int main()
 {
     int n;
     cin >> n;
