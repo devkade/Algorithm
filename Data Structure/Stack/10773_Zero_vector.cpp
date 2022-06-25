@@ -1,9 +1,10 @@
+// using vector
 #include <iostream>
 #include <vector>
 
 using namespace std;
 
-int main_10773()
+int main()
 {
 	int num, value, sum = 0;
 	vector<int> vec;
