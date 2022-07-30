@@ -17,8 +17,12 @@ int main(){
     cin >> R >> C;
     
     for(int i = 0; i < R; i++){
-        fill(dist_F[R], dist_F[R]+C, -1);
-        fill(dist_J[R], dist_J[R]+C, -1);
+        for(int j = 0; j < C; j++){
+            dist_F[i][j] = -1;
+            dist_J[i][j] = -1;
+        }
+    }
+    for(int i = 0; i < R; i++){
         for(int j = 0; j < C; j++){
             cin >> board[i][j];
             if(board[i][j] == 'F'){
@@ -42,19 +46,19 @@ int main(){
             fire.push({nx, ny});
         }
     }
-    while(!runner.empty()){
+    while(!runner.empty()){             // 지훈에 대한 BFS
         auto cur = runner.front(); runner.pop();
         for(int dir = 0; dir<4; dir++){
             int nx = cur.X + dx[dir];
             int ny = cur.Y + dy[dir];
-            if(nx < 0 || nx >= R || ny < 0 || ny >= C){
+            if(nx < 0 || nx >= R || ny < 0 || ny >= C){     // 끝에 도달하면 탈출
                 cout << dist_J[cur.X][cur.Y]+1;
                 return 0;
             }
             if(dist_J[nx][ny] >= 0 || board[nx][ny] == '#') continue;
             if(dist_F[nx][ny] != -1 && dist_F[nx][ny] <= dist_J[cur.X][cur.Y]+1) continue;  // 중요!!!
-            dist_J[nx][ny] = dist_J[cur.X][cur.Y] + 1;
-            runner.push({nx, ny});
+            dist_J[nx][ny] = dist_J[cur.X][cur.Y] + 1;      // 불로 인해 지훈이가 갈 수 없는 경우 제외
+            runner.push({nx, ny});                          // 불이 안지나가도 -1이 기본값이기에 -1일 때는 지나갈 수 있도록 처리
         }
     }
     cout << "IMPOSSIBLE";
