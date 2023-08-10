@@ -1,34 +1,33 @@
-#include <iostream>
-
+#include <bits/stdc++.h>
 using namespace std;
 
-void sumEachDigit(int &sum, int num);
+int main(){
+    ios::sync_with_stdio(false);
+    cin.tie(0); cout.tie(0);
 
-int main()
-{
-	int n, sum, temp;
-	cin >> n;
-	for(int i=1; i<=n; i++)
-	{
-		sum=0;
-		sum+=i;
-		sumEachDigit(sum, i);
-		if(sum == n)
-		{
-			cout << i << endl;
-			break;
-		}
-	}
-	if(sum > n)
-		cout << 0 << endl;
-	return 0;
-}
+    int N, res=-1, sum, div;
 
-void sumEachDigit(int &sum, int num)
-{
-	while(num!=0)
-	{
-		sum += num%10;
-		num /= 10;
-	}
+    cin >> N;
+
+    for(int i=0; i<N; i++){
+        sum = 0;        
+        sum += i;
+
+        div = i;
+        while(div != 0){
+            sum += div % 10;
+            div = div / 10;
+        }
+
+        if (N == sum) {
+            res = i;
+            break;
+        }
+    }
+    if (res == -1) res = 0;
+
+    cout << res << '\n';
+        
+
+    return 0;
 }
