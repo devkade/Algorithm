@@ -8,7 +8,6 @@ int dy[4] = {0, 0, -1, 1};
 int board[501][501] = {0,};
 int dist[501][501];
 int M, N, res = 0;
-stack<pair<int, int>> 
 
 int dfs(int X, int Y){
     if(X == M-1 && Y == N-1){
@@ -41,10 +40,20 @@ int main(){
             dist[row][col] = -1;
         }
     }
+    cout << endl;
 
 
     cout << dfs(0, 0) << '\n';
 
+    for(int row = 0; row < M; row++){
+        for(int col = 0; col < N; col++){
+            if(dist[row][col]==-1) cout << " ";
+            else cout << "  ";
+            cout << dist[row][col];
+        }
+        cout << endl;
+    }
+    cout << endl;
 
     return 0;
 }
