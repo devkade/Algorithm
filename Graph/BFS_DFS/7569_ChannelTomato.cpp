@@ -29,26 +29,6 @@ int main(){
             }
         }
     }
-    /*
-    for(int i = 0; i < h; i++){
-        for(int j = 0; j < n; j++){
-            for(int k = 0; k < m; k++){
-                cout << dist[i][j][k];
-            }
-            cout << endl;
-        }
-        cout << endl << endl;
-    }
-    for(int i = 0; i < h; i++){
-        for(int j = 0; j < n; j++){
-            for(int k = 0; k < m; k++){
-                cout << board[i][j][k];
-            }
-            cout << endl;
-        }
-        cout << endl << endl;
-    }
-    */
     for(int i = 0; i < h; i++){
         for(int j = 0; j < n; j++){
             for(int k = 0; k < m; k++){
@@ -82,3 +62,72 @@ int main(){
     }
     cout << ans << endl;
 }
+
+
+/* -------------------------------- 2È¸Â÷
+#include <bits/stdc++.h>
+using namespace std;
+
+struct point{
+    int z;
+    int y;
+    int x;
+};
+
+int dx[6] = {-1, 1, 0, 0, 0, 0};
+int dy[6] = {0, 0, -1, 1, 0, 0};
+int dz[6] = {0, 0, 0, 0, -1, 1};
+int M, N, H;
+int board[101][101][101];
+queue<point> q;
+
+int main(){
+    ios::sync_with_stdio(false);
+    cin.tie(0);
+
+    cin >> M >> N >> H;
+
+    for(int i = 0; i < H; i++){
+        for(int j = 0; j < N; j++){
+            for(int k = 0; k < M; k++){
+                cin >> board[i][j][k];
+                if(board[i][j][k] == 1){
+                    q.push({i, j, k});
+                }
+            }
+        }
+    }
+
+    int res = 0;
+    while(!q.empty()){
+        point cur = q.front(); q.pop();
+        for(int dir = 0; dir < 6; dir++){
+            int nx = cur.x + dx[dir];
+            int ny = cur.y + dy[dir];
+            int nz = cur.z + dz[dir];
+            if(nx < 0 || nx >= M || ny < 0 || ny >= N || nz < 0 || nz >= H) continue;
+            if(board[nz][ny][nx] >= 1 || board[nz][ny][nx] == -1) continue;
+            q.push({nz, ny, nx});
+            board[nz][ny][nx] = board[cur.z][cur.y][cur.x] + 1;
+        }
+    }
+
+    for(int i = 0; i < H; i++){
+        for(int j = 0; j < N; j++){
+            for(int k = 0; k < M; k++){
+                if(board[i][j][k] == 0){
+                    cout << -1 << '\n';
+                    exit(0);
+                }
+                if(board[i][j][k] > res){
+                    res = board[i][j][k];
+                }
+            }
+        }
+    }
+
+    cout << res-1 << '\n';
+
+    return 0;
+}
+*/
