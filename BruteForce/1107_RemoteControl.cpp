@@ -38,11 +38,12 @@ int Min(int a, int b)
 // 자리수
 int len(int n)
 {
-    int cnt = 0;
+    int cnt = 1;
     while (n)
     {
-        cnt++;
         n /= 10;
+        if(n == 0) return cnt;
+        cnt++;
     }
     return cnt;
 }
@@ -53,7 +54,7 @@ int main()
     cin >> target;
     cin >> bNum;
     initMin = abs(target - 100);
-    min = 100007;
+    min = 1000007;
     // 고장난 버튼 체크
     for (int i = 0; i < bNum; i++)
     {
