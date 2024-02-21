@@ -40,10 +40,5 @@ int main(){
 
     cout << len << endl;
 
-    // for(int k = len; k >= 0; k--){
-    //     cout << res[k];
-    // }
-    // cout << endl;
-
     return 0;
 }
