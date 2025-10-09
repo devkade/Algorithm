@@ -1,1 +1,4 @@
 .vscode
+poetry.lock
+pyproject.toml
+.DS_Store
